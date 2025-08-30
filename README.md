@@ -1,28 +1,51 @@
-1.Euclidean Transformations
-  Operations: Rotation + Translation
-Preserves shape and size (rigid body motion).
-Represented by a rotation matrix + translation vector.
-Demo: A square rotated and shifted.
+🔄 Geometric Transformations in 2D
 
-2.Similarity Transformations
+1️⃣ Euclidean Transformations (Rigid Body Motion)
+	•	Operations: Rotation + Translation
+	•	Properties: Preserves shape and size (rigid).
+	•	Matrix form:
+x{\prime} = R \cdot x + t
+where R = rotation matrix, t = translation vector.
+	•	Demo: A square rotated and shifted.
 
-Operations: Rotation + Translation + Uniform Scaling
-Preserves shape, but not size.
-Special case of affine transform with scaling factor k.
-Demo: A square rotated, shifted, and uniformly scaled
+⸻
 
-3. Affine Transformations
+2️⃣ Similarity Transformations
+	•	Operations: Rotation + Translation + Uniform Scaling
+	•	Properties: Preserves shape but not size.
+	•	Special case: Affine transform with uniform scale factor k.
+	•	Matrix form:
+x{\prime} = kR \cdot x + t
+	•	Demo: A square rotated, shifted, and scaled uniformly.
 
-Operations: Rotation, Translation, Scaling (uniform/non-uniform), Shear
-Preserves parallel lines, but not necessarily angles or lengths.
-Represented by a 2×3 affine matrix.
-Demo: A square warped into a rectangle or parallelogram.
+⸻
 
-4. Projective Transformations (Homography)
+3️⃣ Affine Transformations
+	•	Operations: Rotation, Translation, Scaling (uniform / non-uniform), Shear
+	•	Properties: Preserves parallel lines, not angles/lengths.
+	•	Matrix form (2×3):
+\begin{bmatrix}
+x{\prime} \\ y{\prime}
+\end{bmatrix}
 
-Most general linear 2D warp.
-Operations: Translation, Rotation, Scaling, Shear, Perspective warping.
-Preserves straight lines, but parallel lines may meet (vanishing point).
-Represented by a 3×3 homography matrix in homogeneous coordinates.
-Demo: A square warped into a trapezoid (simulating perspective).
+\begin{bmatrix}
+a & b & t_x \\
+c & d & t_y
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x \\ y \\ 1
+\end{bmatrix}
+	•	Demo: A square warped into a rectangle/parallelogram.
+
+⸻
+
+4️⃣ Projective Transformations (Homography)
+	•	Most general linear 2D warp
+	•	Operations: Translation, Rotation, Scaling, Shear, Perspective warp
+	•	Properties: Preserves straight lines, but parallel lines may meet at vanishing point.
+	•	Matrix form (3×3):
+x{\prime} \sim H \cdot x
+where H is a 3×3 homography matrix in homogeneous coordinates.
+	•	Demo: A square warped into a trapezoid (perspective view).
 
