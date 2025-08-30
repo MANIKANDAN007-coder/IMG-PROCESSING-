@@ -1,4 +1,4 @@
-1. Euclidean Transformations
+1.Euclidean Transformations
   Operations: Rotation + Translation
 Preserves shape and size (rigid body motion).
 Represented by a rotation matrix + translation vector.
